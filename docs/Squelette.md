@@ -1,7 +1,7 @@
 # Identification de l'étudiant
 
 - <nomComplet1>Marco Sauvé</nomComplet1>
-- <courriel1marco.sauve.1@ens.etsmtl.ca</courriel1>
+- <courriel1>marco.sauve.1@ens.etsmtl.ca</courriel1>
 - <codeMoodle1>AU26360</codeMoodle1>
 - <githubAccount1>ShavedFalcon</githubAccount1>
 
