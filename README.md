@@ -74,7 +74,7 @@ Vous pouvez cocher chaque étape dans la liste suivante:
 
 ### 0. préparer votre machine pour ce tutoriel;
 
-- [ ] jeter un œil sur la [documentation du squelette](docs/Squelette.md)
+- [x] jeter un œil sur la [documentation du squelette](docs/Squelette.md)
 
 - [ ] [installer node.js](https://nodejs.org/en/download/) sur votre machine
 
