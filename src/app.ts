@@ -4,6 +4,7 @@ import logger from 'morgan';
 import flash from 'express-flash-plus';
 
 import { jeuRoutes } from './routes/jeuRouter';
+import { Joueur } from './core/joueur';
 
 // Creates and configures an ExpressJS web server.
 class App {
@@ -59,16 +60,26 @@ class App {
         });
     });
 
+
     // Route pour classement (stats)
+    // Aider par ChatGPT, voir rapport
     router.get('/stats', (req, res, next) => {
-      res.render('stats',
-        // passer objet au gabarit (template) Pug
-        {
-          title: `${titreBase}`,
-          user: user,
-          // créer nouveau tableau de joueurs qui est trié par ratio
-          joueurs: JSON.parse(jeuRoutes.controleurJeu.joueurs)
-        });
+      const joueurs: Array<Joueur> = JSON.parse(jeuRoutes.controleurJeu.joueurs);
+      const joueursAvecRatio = joueurs
+        .map(joueur => {
+          const ratio = joueur.lancers > 0 ? joueur.lancersGagnes / joueur.lancers : 0;
+          return {
+            ...joueur,    // on garde toutes les propriétés existantes
+            ratio: ratio  // on ajoute la propriété calculée
+          };
+        })
+        .sort((a, b) => b.ratio - a.ratio); // tri décroissant sur ratio
+
+      res.render('stats', {
+        title: `${titreBase}`,
+        user: user,
+        joueurs: joueursAvecRatio
+      });
     });
 
     // Route to login

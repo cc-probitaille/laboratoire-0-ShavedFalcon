@@ -182,6 +182,12 @@ Voici la même figure, mais sous forme de diagramme de séquence avec l'acteur. 
 
 ### Contrats d'opération et Réalisations de cas d'utilisation (RDCU)
 
+![Contrats d'opération et Réalisations de cas d'utilisation]()
+
+### Diagramme de classes logicielles
+
+![Diagramme de classe logicielles](http://www.plantuml.com/plantuml/png/rLJ1RXen4Btp5LPEYO28LEbbYr2YRb8rQcdJV41arg_8rQvDndOAGlnxpNePxO92rLwQSbZXDs_UisVikN9UaWzLsIjAwPp88TOz4N_3nsTP8b0cJAXce1hipoYIGATdcNYsMYLmZxZfoPdp90ilagR2TnbABx3qCCg96o9BZKr_lIDlH64LMYef-QE9ybfzbIGhU52Tp5BNJN97CkbSZaOiScS30l79ZAqo4HErcU-GsITf2f1Z_ptyWvmRTAFz0vbe9RNHDBNLQIjurc7romCd1jdcCDGj-JpozZ5lxnw-JBVOMhJStuazGmROh84tNA-fzRSs6FK7nRxavEkI8DNgPgcTTt_NBeGSEHmtx4VTFvU9pt8nJiSQD4sTD1HraOaSkyKRNlGLAaa4Yg97ch9re2DnGbkdMtTGfStl3FZbT9lB9qlSTWc-sU11N0Egbvb8S0CMrdYo9SBMFUF29UsZmKEvRga8Jp68fm3dn_NhSxaklBP6qceWfDbzxWDezL3l_Zpo7DIz6yJCmfBYNaNcP38G1BSLTGjh7COHV8beiFIPcCRlRJ2rAvUSk_MgjpXy196bzrRXxMXqMY-oj9j_kUqNB-whRZVXlxcPscZFuu4ducAn6tPOBWZEHIGJpV_pk2Xr8RTQwUvKMgaIFoM1fMgyVhEk9S-3SZYSY9EBasOc7k8vUZnH6EI1S0MZGbN-0W00)
+
 #### Opération: `démarrerJeu(nom:String)`
 
 **Postconditions**
@@ -216,3 +222,14 @@ Voici la même figure, mais sous forme de diagramme de séquence avec l'acteur. 
 ![Diagramme de séquence, terminerJeu](http://www.plantuml.com/plantuml/proxy?cache=no&fmt=svg&src=https://raw.githubusercontent.com/profcfuhrmanets/log210-jeu-de-des-node-express-ts/master/docs/modeles/rdcu-terminerJeu.puml)
 
 [README.md](../README.md)
+
+### Utilisation de SIAG
+
+**ChatGPT**
+
+- prompt: 
+
+- réponse: 
+
+- lien: 
+

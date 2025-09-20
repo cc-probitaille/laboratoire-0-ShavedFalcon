@@ -63,7 +63,7 @@ export class JeuRouter {
       // flash un message selon le résultat
       const key = resultatObj.somme == 7 ? 'win' : 'info';
       req.flash(key,
-        `Résultat pour ${nom}: ${resultatObj.v1} + ${resultatObj.v2} = ${resultatObj.somme}`);
+        `Résultat pour ${nom}: ${resultatObj.v1} + ${resultatObj.v2} + ${resultatObj.v3} = ${resultatObj.somme}`);
       res.status(200)
         .send({
           message: 'Success',
@@ -107,6 +107,28 @@ export class JeuRouter {
   }
 
   /**
+   * 
+   */
+  public redemarrerJeu(req: Request, res: Response, next: NextFunction) {
+
+    try {
+      // Appeler l'operation systeme redemarrerJeu() 
+      const resultat = this._controleurJeu.redemarrerJeu();
+      // Un flash pour l'utilisateur
+      req.flash('info', "L'application redemarre");
+      // retourne code 200
+      res.status(200)
+        .send({
+          message: 'Success'
+        });
+    } catch (error) {
+      // Si erreur code 500
+      this._errorCode500(error, req, res);
+    }
+
+  }
+
+  /**
      * Take each handler, and attach to one of the Express.Router's
      * endpoints.
      */
@@ -114,6 +136,7 @@ export class JeuRouter {
     this._router.post('/demarrerJeu', this.demarrerJeu.bind(this)); // pour .bind voir https://stackoverflow.com/a/15605064/1168342
     this._router.get('/jouer/:nom', this.jouer.bind(this)); // pour .bind voir https://stackoverflow.com/a/15605064/1168342
     this._router.get('/terminerJeu/:nom', this.terminerJeu.bind(this)); // pour .bind voir https://stackoverflow.com/a/15605064/1168342
+    this._router.get('/redemarrerJeu',this.redemarrerJeu.bind(this));
   }
 
 }
